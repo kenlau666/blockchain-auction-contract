@@ -2,7 +2,7 @@
 
 
 ## 1. Flow
-. The seller constructs the contract with his address and sets the start time and the expected price.
+1. The seller constructs the contract with his address and sets the start time and the expected price.
 2. Before the end time, anyone can call bid(bytes32 h) to submit the hash of a large string and bid amount, and make a deposit = expected price. Expected price acts like anadmission ticket here.
 3. After the end time, bidders have 24 hours to call release_bid(string memory nonce, uint bid_amount). If the bidder becomes the temporary winner, an event winner_update will 
 be emitted. Only bidders who have submitted the hash can call release and they can only release once. One day later, the final winner is set.
